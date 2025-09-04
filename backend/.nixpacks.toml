@@ -1,0 +1,16 @@
+# ========================
+# Nixpacks config for backend
+# ========================
+
+[env]
+NODE_VERSION = "18"
+
+[build]
+# Only install dependencies once
+install = ["npm ci"]
+# No separate build step for backend
+build = []
+
+[start]
+# Start the backend server
+start = ["npm start"]
