@@ -7,7 +7,6 @@ import projectRoutes from "./routes/projectRoutes.js";
 import taskRoutes from "./routes/taskRoutes.js";
 import cors from "cors";
 import helmet from "helmet";
-import path from "path";
 
 dotenv.config();
 
@@ -29,14 +28,6 @@ app.use("/api/projects", projectRoutes);
 app.use("/api/tasks", taskRoutes);
 
 app.get('/health', (req, res) => res.send('ok'));
-
-// Optional: Serve React build when frontend is deployed
-// if (process.env.NODE_ENV === 'production') {
-//   app.use(express.static(path.join(__dirname, '../frontend/build')));
-//   app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
-//   });
-// }
 
 connectDB().then(() => {
   app.listen(PORT, () => {
