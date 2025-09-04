@@ -1,9 +1,6 @@
 import axios from "axios";
 
-const BASE_URL =
-  process.env.NODE_ENV === "production"
-    ? "https://projectmanagementdashboard-production.up.railway.app"
-    : "http://localhost:5001/api";
+const BASE_URL = "https://projectmanagementdashboard-production.up.railway.app/api";
 
 const apiClient = axios.create({
   baseURL: BASE_URL,
