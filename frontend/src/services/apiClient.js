@@ -1,13 +1,9 @@
 import axios from "axios";
 
-const BASE_URL = "https://projectmanagementdashboard-production.up.railway.app/api";
-
 const apiClient = axios.create({
-  baseURL: BASE_URL,
-  withCredentials: true,
-  headers: {
-    "Content-Type": "application/json",
-  },
+  baseURL: import.meta.env.VITE_API_URL,
+  withCredentials: true, // must for cookies
+  headers: { "Content-Type": "application/json" },
 });
 
 export default apiClient;
