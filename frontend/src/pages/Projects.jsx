@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { Plus, X } from "lucide-react";
-import ProjectCard from "../components/Projectcard";
+import ProjectCard from "../components/ProjectCard";
 import useProjectStore from "../store/useProjectStore";
 import useTaskStore from "../store/useTaskStore";
 import formatDateForBackend from "../utils/formatDateForBackend";
