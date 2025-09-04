@@ -27,6 +27,8 @@ app.use("/api/auth", authRoutes);
 app.use("/api/projects", projectRoutes);
 app.use("/api/tasks", taskRoutes);
 
+app.get('/health', (req, res) => res.send('ok'));
+
 connectDB().then(() => {
   app.listen(PORT, () => {
     console.log("Server is running on port: " + PORT);
