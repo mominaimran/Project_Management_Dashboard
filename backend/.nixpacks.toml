@@ -1,7 +1,3 @@
-# ========================
-# Nixpacks config for backend
-# ========================
-
 [env]
 NODE_VERSION = "18"
 
