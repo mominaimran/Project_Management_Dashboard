@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import useTaskStore from "../store/useTaskStore";
 import useProjectStore from "../store/useProjectStore";
 import TasksList from "../components/TasksList";
-import PushDropdown from "@/components/ui/pushDropDown";
+import PushDropdown from "@/components/ui/PushDropdown";
 import StatusDropdown from "@/components/ui/StatusDropdown";
 import { Filter } from "lucide-react";
 import { toast } from "react-hot-toast";
