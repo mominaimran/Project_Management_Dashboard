@@ -8,7 +8,7 @@ const Layout = () => {
   const handleCloseSidebar = () => setIsMobileOpen(false);
 
   return (
-    <div className="flex h-screen overflow-hidden">
+    <div className="flex h-screen">
       {/* Desktop Sidebar */}
       <div className="hidden md:block">
         <Sidebar isCollapsed={false} />
@@ -35,7 +35,7 @@ const Layout = () => {
         <Topbar onMobileMenu={() => setIsMobileOpen(true)} />
 
         {/* Scrollable content */}
-        <main className="flex-1 overflow-y-auto bg-bg-dark/25">
+        <main className="flex-1 overflow-y-auto overflow-x-hidden bg-bg-dark/25">
           <Outlet />
         </main>
       </div>

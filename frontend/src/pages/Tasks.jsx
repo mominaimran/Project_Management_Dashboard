@@ -114,7 +114,7 @@ const Tasks = () => {
 
   return (
     <motion.div
-      className="p-4 md:p-6 min-h-screen overflow-hidden rounded-xl"
+      className="p-4 md:p-6 min-h-screen rounded-xl overflow-x-hidden"
       initial={{ x: "-20%", opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ type: "spring", stiffness: 60, damping: 20 }}

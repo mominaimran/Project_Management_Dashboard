@@ -14,11 +14,11 @@ const TasksList = ({ tasks, onDelete, onEdit }) => {
         <span className="text-gray-600 text-sm">{tasks.length} Tasks</span>
       </div>
 
-      {/* Scrollable container for small screens */}
+      {/* 👇 Scrollable only for table */}
       <div className="overflow-x-auto">
-        <div className="min-w-[600px]">
+        <div className="min-w-[650px]">
           {/* Table Headings */}
-          <div className="grid grid-cols-5 font-semibold text-gray-700 border-b pb-2 mb-2 sticky top-0 bg-white z-10">
+          <div className="grid grid-cols-5 font-semibold text-gray-700 border-b pb-2 mb-2 bg-white">
             <div>Title</div>
             <div>Description</div>
             <div>Project</div>
@@ -40,8 +40,10 @@ const TasksList = ({ tasks, onDelete, onEdit }) => {
               <div>
                 <span
                   className={`px-2 py-1 rounded-full text-xs ${
-                    task.status === "Completed"
+                    task.status === "done"
                       ? "bg-green-100 text-green-600"
+                      : task.status === "in-progress"
+                      ? "bg-blue-100 text-blue-600"
                       : "bg-yellow-100 text-yellow-600"
                   }`}
                 >
