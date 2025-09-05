@@ -26,12 +26,6 @@ _(⚠️ Note: This is a REST API, so opening the link directly may not show UI.
 
 ---
 
-## 🖼️ Demo Preview (Optional)
-![Dashboard Screenshot](./images/dashboard.png)  
-> Replace `./images/dashboard.png` with your actual screenshot path if adding images.
-
----
-
 ## 🚀 Getting Started
 
 ### Prerequisites
