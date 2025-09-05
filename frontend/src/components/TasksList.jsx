@@ -18,7 +18,7 @@ const TasksList = ({ tasks, onDelete, onEdit }) => {
       <div className="hidden sm:block max-h-[400px] overflow-y-auto rounded-lg border">
         <div className="min-w-[700px]">
           {/* Table Headings */}
-          <div className="grid grid-cols-5 font-semibold text-gray-700 border-b pb-2 mb-2 bg-white sticky top-0 z-10">
+          <div className="grid grid-cols-5 font-semibold text-gray-700 border-b px-4 py-2 bg-white sticky top-0 z-10 shadow-sm">
             <div>Title</div>
             <div>Description</div>
             <div>Project</div>
@@ -29,8 +29,8 @@ const TasksList = ({ tasks, onDelete, onEdit }) => {
           {/* Table Rows */}
           {tasks.map((task) => (
             <div
-              className="grid grid-cols-5 items-center py-2 border-b last:border-none text-sm hover:bg-gray-50"
               key={task._id}
+              className="grid grid-cols-5 items-center px-4 py-2 border-b last:border-none text-sm hover:bg-gray-50"
             >
               <div className="truncate">{task.title}</div>
               <div className="truncate">{task.description}</div>
@@ -87,7 +87,7 @@ const TasksList = ({ tasks, onDelete, onEdit }) => {
             </div>
 
             {/* Row 2: Description */}
-            <p className="text-sm text-gray-600 mb-2">{task.description}</p>
+            <p className="text-sm text-gray-600 mb-3">{task.description}</p>
 
             {/* Row 3: Status + Actions */}
             <div className="flex justify-between items-center">
