@@ -40,7 +40,13 @@ app.use("/api/auth", authRoutes);
 app.use("/api/projects", projectRoutes);
 app.use("/api/tasks", taskRoutes);
 
-app.get("/health", (req, res) => res.send("ok"));
+// ✅ Health check route
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    status: "OK",
+    message: "Backend is running 🚀",
+  });
+});
 
 connectDB().then(() => {
   app.listen(PORT, () => {
